@@ -10,11 +10,35 @@ using System.Windows.Forms;
 
 namespace TempConverterToluA
 {
-    public partial class TempConverterForm : Form
+    public partial class frmTempConverter : Form
     {
-        public TempConverterForm()
+        public frmTempConverter()
         {
             InitializeComponent();
+        }
+        public void ConvertTemp (float Celsius)
+        {
+            // Identify Variables
+            float Fahrenheit;
+            Fahrenheit = (9 / 5) * Celsius + 32;
+            // Display Message Box
+            MessageBox.Show("The Temperature is : " + Fahrenheit + " Fahrenheit" , "Conversion");
+        }
+
+
+        private void frmTempConverter_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConvert_Click(object sender, EventArgs e)
+        {
+            // Identify Variables
+            int UserTemperature;
+            // convert from int to String
+            UserTemperature = Convert.ToUInt16(this.txtDegrees.Text);
+            // Call the function to calculate the area passing the UserTemperature by Value
+            this.ConvertTemp(UserTemperature);
         }
     }
 }

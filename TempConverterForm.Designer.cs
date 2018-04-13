@@ -1,6 +1,6 @@
 ﻿namespace TempConverterToluA
 {
-    partial class TempConverterForm
+    partial class frmTempConverter
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.btnConvert.TabIndex = 0;
             this.btnConvert.Text = "Convert";
             this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // lblEnterCelsius
             // 
@@ -58,7 +59,7 @@
             this.txtDegrees.Size = new System.Drawing.Size(51, 20);
             this.txtDegrees.TabIndex = 3;
             // 
-            // TempConverterForm
+            // frmTempConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,8 +67,9 @@
             this.Controls.Add(this.txtDegrees);
             this.Controls.Add(this.lblEnterCelsius);
             this.Controls.Add(this.btnConvert);
-            this.Name = "TempConverterForm";
-            this.Text = "Form1";
+            this.Name = "frmTempConverter";
+            this.Text = "TempConverter";
+            this.Load += new System.EventHandler(this.frmTempConverter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
