@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Created by:Tolu Adebayo
+ * Created on: 13-April-2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #27 - Temperature Converter
+ * This program...
+*/
 namespace TempConverterToluA
 {
     public partial class frmTempConverter : Form
@@ -20,7 +26,7 @@ namespace TempConverterToluA
         {
             // Identify Variables
             float Fahrenheit;
-            Fahrenheit = (9 / 5) * Celsius + 32;
+            Fahrenheit = (float)9 / (float)5 * Celsius + 32;
             // Display Message Box
             MessageBox.Show("The Temperature is : " + Fahrenheit + " Fahrenheit" , "Conversion");
         }
@@ -39,6 +45,7 @@ namespace TempConverterToluA
             UserTemperature = Convert.ToUInt16(this.txtDegrees.Text);
             // Call the function to calculate the area passing the UserTemperature by Value
             this.ConvertTemp(UserTemperature);
+
         }
     }
 }
